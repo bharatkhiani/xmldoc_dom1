@@ -1,0 +1,9 @@
+C:\data\bharat\gareth1\xmldoc_dom1\xmldoc_dom1\bin\Debug\xmldoc_dom1.exe.config
+C:\data\bharat\gareth1\xmldoc_dom1\xmldoc_dom1\bin\Debug\xmldoc_dom1.exe
+C:\data\bharat\gareth1\xmldoc_dom1\xmldoc_dom1\bin\Debug\xmldoc_dom1.pdb
+C:\data\bharat\gareth1\xmldoc_dom1\xmldoc_dom1\obj\Debug\xmldoc_dom1.csprojResolveAssemblyReference.cache
+C:\data\bharat\gareth1\xmldoc_dom1\xmldoc_dom1\obj\Debug\xmldoc_dom1.Form1.resources
+C:\data\bharat\gareth1\xmldoc_dom1\xmldoc_dom1\obj\Debug\xmldoc_dom1.Properties.Resources.resources
+C:\data\bharat\gareth1\xmldoc_dom1\xmldoc_dom1\obj\Debug\xmldoc_dom1.csproj.GenerateResource.Cache
+C:\data\bharat\gareth1\xmldoc_dom1\xmldoc_dom1\obj\Debug\xmldoc_dom1.exe
+C:\data\bharat\gareth1\xmldoc_dom1\xmldoc_dom1\obj\Debug\xmldoc_dom1.pdb

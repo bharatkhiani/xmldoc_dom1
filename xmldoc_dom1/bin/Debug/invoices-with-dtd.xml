@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE invoices [
+<!ELEMENT invoices (invoice)*>
+<!ELEMENT invoice ( patient, insurance?, procedure* )>
+<!ATTLIST invoice number        CDATA   #REQUIRED
+                  date          CDATA   #REQUIRED>
+<!ELEMENT patient ( phone | address )*>
+<!ATTLIST patient       firstname   CDATA #REQUIRED
+                        familyname  CDATA #REQUIRED
+                        SSN         CDATA "">
+<!ELEMENT insurance ( address | phone )*>
+<!ATTLIST insurance     name CDATA ""
+                        plannumber      CDATA ""
+                        planname        CDATA "">
+<!ELEMENT procedure  (#PCDATA) >
+<!ATTLIST procedure     code    CDATA #REQUIRED
+                        name    CDATA ""
+                        cost    CDATA ""
+                        insurance_estimate      CDATA  ""
+                        submitted (yes|no) "yes">
+<!ELEMENT phone EMPTY>
+<!ATTLIST phone         type (home|work|mobile|other)   "other"
+                        number  CDATA  "">
+<!ELEMENT address EMPTY>
+<!ATTLIST address         type (home|work|business|other)   "other"
+                        company CDATA  ""
+                        line1   CDATA  ""
+                        line2   CDATA  ""
+                        city    CDATA  ""
+                        state   CDATA  ""
+                        zip     CDATA  "">
+]>
+<invoices>
+  <invoice number="25" date="February 28, 2001">
+    <patient firstname="Jeff" familyname="Smith" SSN="123456789">
+      <phone type="home" number="123-4567890"/>
+      <phone number="321-76543321" type="work"/>
+      <address type="home" line1="123 Street" city="City" state="US" zip="12345"/>
+    </patient>
+    <insurance name="Humongous First Medical Insurance" plannumber="12345" planname="The Client Company">
+    <phone number="098-76543321"/>
+    <address type="business" line1="321 Street" city="City" state="US" zip="54321"/>
+    </insurance>
+    <procedure code="123" name="Cleaning nose" cost="50.00" insurance_estimate="50.00"/>
+    <procedure code="124" name="Tarot reading of illnesses" cost="150.00" insurance_estimate="120.00"/>
+    <procedure code="125" name="Just for fun" cost="100.00" insurance_estimate="80.00"/>
+  </invoice>
+  <invoice number="27" date="February 28, 2001">
+      <patient firstname="James" familyname="Smith" SSN="123456765">
+         <phone type="home" number="123-4562245"/>
+         <address type="home" line1="432 Street" city="City" state="US" zip="12343"/>
+       </patient>
+       <insurance name="Humongous Second Medical Insurance" plannumber="3455" planname="Another Client Company">
+          <phone number="098-76543321"/>
+          <address type="business" line1="344 Street" city="Some City" state="US" zip="54323"/>
+       </insurance>
+       <procedure code="123" name="Cleaning nose" cost="50.00" insurance_estimate="50.00"/>
+       <procedure code="124" name="Tarot reading of illnesses" cost="150.00" insurance_estimate="120.00"/>
+  </invoice>
+  <invoice number="29" date="February 28, 2001">
+    <patient firstname="Neil" familyname="Smith" SSN="123456345">
+      <phone type="home" number="125-4345890"/>
+      <address type="home" line1="187 Street" city="Lost City" state="US" zip="42145"/>
+    </patient>
+    <insurance name="Humongous Third Medical Insurance" plannumber="12345" planname="The Lost City Client Company">
+      <phone number="198-76345321"/>
+      <address type="business" line1="342 Street" city="Completely Lost City" state="US" zip="111111-0000"/>
+    </insurance>
+    <procedure code="123" name="Cleaning nose" cost="50.00" insurance_estimate="50.00"/>
+    <procedure code="125" name="Maybe they wouldn't see this line..." cost="100.00" insurance_estimate="80.00"/>
+  </invoice>
+</invoices>
